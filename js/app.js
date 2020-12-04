@@ -44,9 +44,9 @@ class UI {
     fila.innerHTML = `
             <td>${venta.nombre}</td>
             <td>${venta.correo}</td>
-            <td>${venta.punitario}</td>
+            <td>$${venta.punitario}</td>
             <td>${venta.cantidad}</td>
-            <td>${venta.total}</td>
+            <td>$${venta.total}</td>
             <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
             `;
     listaVentas.appendChild(fila);
@@ -108,7 +108,7 @@ document.querySelector("#form-venta").addEventListener("submit", (e) => {
     UI.limpiarInputs();
     UI.mostrarAlertas('Venta Exitosa', 'info');
   } else {
-    UI.mostrarAlertas('Debe llenar todos los campos válidos', 'danger');
+    UI.mostrarAlertas('Debe llenar todos los campos con datos válidos', 'danger');
   }
 });
 
