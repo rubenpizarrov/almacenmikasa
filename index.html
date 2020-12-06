@@ -11,6 +11,27 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navegacion -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -43,6 +64,24 @@
                             <a class="nav-link" href="#venta">Contacto</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#staticBackdrop">
+                                <i class="fas fa-user"></i> Ingresar
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -52,15 +91,17 @@
     <section id="hero">
         <div class="container">
             <div class="row main-hero-content">
-                    <div class="col-md-6">
-                        <h1>ALMACEN MIKASA</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non architecto facere asperiores praesentium cumque voluptatum, quod labore quas quo rem quos deserunt earum ipsum inventore, doloremque maiores? Recusandae, mollitia quis!</p>
+                <div class="col-md-6">
+                    <h1>ALMACEN MIKASA</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non architecto facere asperiores
+                        praesentium cumque voluptatum, quod labore quas quo rem quos deserunt earum ipsum inventore,
+                        doloremque maiores? Recusandae, mollitia quis!</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="image-box">
+                        <img src="img/cuerpo.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-md-6">
-                        <div class="image-box">
-                            <img src="img/cuerpo.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
+                </div>
             </div>
         </div>
 
@@ -111,7 +152,7 @@
 
     </section>
 
-    
+
     <section id="tabla-venta">
         <div class="container">
             <div class="row section-title justify-content-center">
