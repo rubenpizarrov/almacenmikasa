@@ -182,6 +182,14 @@ h2.section-title-heading {
   margin-top: 3rem;
 }
 
+/* ============ tabla indicadores =============== */
+
+#tabla-indicadores {
+  background-color: #fafafa;
+  padding-bottom: 6rem;
+  margin-top: 3rem;
+}
+
 /* ============ Footer =============== */
 #footer {
   background-color: #2b323f;
