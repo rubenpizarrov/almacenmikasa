@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Almacén MiKasa</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MIKASA</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#venta">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indicadores.html">Indicadores Económicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#venta">Ordenes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#venta">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#venta">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html">
+                            <i class="fas fa-user"></i> Ingresar
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+  <!-- hero section -->
+  <section id="hero">
+    <div class="container">
+      <div class="row main-hero-content">
+        <div class="col-md-6">
+          <h1>ALMACEN MIKASA</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non architecto facere asperiores
+            praesentium cumque voluptatum, quod labore quas quo rem quos deserunt earum ipsum inventore,
+            doloremque maiores? Recusandae, mollitia quis!</p>
+        </div>
+        <div class="col-md-6">
+          <div class="image-box">
+            <img src="img/cuerpo.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="registro-form">
+    <div class="container">
+      <div class="row justify-content-center section-title mb-5">
+        <h2 class="section-title-heading">Registro de Clientes</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form id="form-registro" class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" value="" required>
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback">
+                  debe llenar este campo!
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 mb-3">
+                <label for="rut">RUT</label>
+                <input type="text" class="form-control" id="rut" onblur="formatoRut(this.value, this.id)"" required>
+                            <div class=" invalid-feedback">
+                El rut no es válido
+              </div>
+              <div class="valid-feedback"></div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="telefono">Teléfono</label>
+              <input type="text" class="form-control telefono" id="telefono" required>
+              <div class="invalid-feedback">
+                numero no valido
+              </div>
+              <div class="valid-feedback">
+              </div>
+            </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="direccion">Dirección</label>
+            <input type="text" class="form-control" id="direccion" required>
+            <div class="invalid-feedback">
+              Debe llenar este campo
+            </div>
+            <div class="valid-feedback">
+
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="correo">Correo</label>
+            <input type="text" class="form-control" id="correo" required>
+            <div class="invalid-feedback">
+              debe ser un correo valido
+            </div>
+            <div class="valid-feedback"></div>
+          </div>
+        </div>
+        <button class="btn btn-danger">Registrar</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex flex-column align-items-center">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="copyright text-center">
+          <p>Copyright 2020</p>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+  <script src="js/formatorut.js"></script>
+  <script src="js/validaciones.js"></script>
+  
+</body>
+
+</html>
