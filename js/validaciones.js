@@ -32,7 +32,7 @@
   function validarNombre(){
     const nombreValue = nombre.value.trim(); 
   
-    if(nombreValue === '' || nombreValue.length < 2){
+    if(nombreValue === '' || nombreValue.length < 2 || !isLetters(nombreValue)){
       nombre.classList.add('is-invalid');
       nombre.classList.remove('is-valid');
     } else {
@@ -43,9 +43,10 @@
   }
 
   function validarTelefono(){
-    const telefonoValue = telefono.value.trim(); 
+    let telefonoValue = telefono.value.trim(); 
   
     if(telefonoValue === '' || telefonoValue.length < 15){
+      telefono.value.replace(' ', '');
       telefono.classList.add('is-invalid');
       telefono.classList.remove('is-valid');
     } else {
@@ -59,7 +60,7 @@
   function validarDireccion(){
     const direccionValue = direccion.value.trim(); 
   
-    if(direccionValue === '' || direccionValue.length < 10){
+    if(direccionValue === '' || direccionValue.length < 10 || !isLetters(direccionValue)){
       direccion.classList.add('is-invalid');
       direccion.classList.remove('is-valid');
     } else {
@@ -100,6 +101,14 @@
 
   function emailIsValid (email) {
     return /\S+@\S+\.\S+/.test(email);
+  }
+
+  function isaNumber(fono){
+    return /^[0-9]+$/.test(fono);
+  }
+
+  function isLetters(nombre){
+    return /^[A-Za-z]+$/.test(nombre);
   }
   
   
